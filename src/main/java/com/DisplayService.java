@@ -36,7 +36,7 @@ public class DisplayService {
 
     }
 
-    public void BoradProt( String[][] brd ){
+    public void BoardProt( String[][] brd ){
 
         for (int i = 0; i < brd.length; i++) {
             for (int j = 0; j < brd[i].length; j++) {
@@ -45,6 +45,22 @@ public class DisplayService {
             System.out.println();
           }
 
+    }
+
+    public void BoardUpdate( String[][] brd ){
+      
+        for (int i = 0; i < brd.length; i++) {
+            System.out.print("\033[1A"); // カーソルを1行上に移動
+            System.out.print("\033[2K"); // 現在の行をクリア
+          }
+
+        for (int i = 0; i < brd.length; i++) {
+            for (int j = 0; j < brd[i].length; j++) {
+              System.out.print(brd[i][j] + " ");
+            }
+            System.out.println();
+          }
+  
     }
     
 }
