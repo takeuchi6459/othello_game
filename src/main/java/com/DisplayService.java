@@ -2,11 +2,13 @@ package main.java.com;
 
 public class DisplayService {
 
-    public void OneLiner(String msg) throws InterruptedException{
+    public void OneLiner(String msg){
 
         System.out.println( msg );
 
     }
+
+
     public void CarsorTest() throws InterruptedException{
 
         // 初期の出力
@@ -31,6 +33,18 @@ public class DisplayService {
         System.out.println("Updated Line 1");
         System.out.println("Updated Line 2");
         System.out.println("Updated Line 3");
+
+    }
+
+    public void BoradProt( String[][] brd ){
+
+        for (int i = 0; i < brd.length; i++) {
+            for (int j = 0; j < brd[i].length; j++) {
+              System.out.print(brd[i][j] + " ");
+            }
+            System.out.println();
+          }
+
     }
     
 }
