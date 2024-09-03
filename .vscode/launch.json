@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "OthelloMain",
+            "request": "launch",
+            "mainClass": "com.OthelloMain",
+            "projectName": "othello_game"
+        },
+        {
+            "type": "java",
+            "name": "OthelloMain",
+            "request": "launch",
+            "mainClass": "com.example.OthelloMain",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.example.Main",
