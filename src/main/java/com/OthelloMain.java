@@ -1,6 +1,6 @@
-package com.example;
-import main.java.com.CmdInputService;
-import main.java.com.DisplayService;
+package com;
+import com.service.CmdInputService;
+import com.service.DisplayService;
 
 public class OthelloMain {
     /**
