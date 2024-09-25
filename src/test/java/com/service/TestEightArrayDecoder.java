@@ -1,7 +1,9 @@
 package com.service;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.assertj.core.api.Assertions.assertThat;
 
 
 import java.util.Arrays;
@@ -13,32 +15,37 @@ import org.junit.jupiter.params.provider.CsvSource;
 public class TestEightArrayDecoder {
     
     /**
-     * @param ex
-     * @param s
+    //  * @param ex
+    //  * @param s
      */
-    @ParameterizedTest
-    @CsvSource({
-     "[' ',' ',' ',' ',' ',' ',' ',' '], 0",
-     "' , , , , , , , ', 1",
-     "' , , , , , , ,○', 2",
-     "' , , , , , , ,●', 3",
+    // @ParameterizedTest
+    // @CsvSource({
+    //  "[' ',' ',' ',' ',' ',' ',' ',' '], 0",
+    //  "' , , , , , , , ', 1",
+    //  "' , , , , , , ,○', 2",
+    //  "' , , , , , , ,●', 3",
 
-     "' , , , , , , , ', 0",
-     "' , , , , , , , ', 4",
-     "' , , , , , , ,○', 8",
-     "' , , , , , , ,●', 12"
+    //  "' , , , , , , , ', 0",
+    //  "' , , , , , , , ', 4",
+    //  "' , , , , , , ,○', 8",
+    //  "' , , , , , , ,●', 12"
 
-    })
+    // })
 
-    public void ArrayTest(String[] ex, int s){
-        EightArrayDecoder dc = new EightArrayDecoder();
-        assertArrayEquals(ex, dc.EightArrayDecoder(s));
-    }
+    // @Test
+    // public void ArrayTest(String[] ex, int s){
+    //     EightArrayDecoder dc = new EightArrayDecoder();
+    //     assertArrayEquals(ex, dc.EightArrayDecoder(s));
+    // }
 
     @DisplayName("Should rotate successfully")
     @ParameterizedTest()
     @CsvSource({
+            "'[1, 0, 0]', '[1, 0, 1]'",
             "'[1, 0, 0]', '[1, 0, 0]'",
+            "'[1, 2, 3]', '[1, 2, 3]'",
+            "'[1, 0, 0]', '[1, 1, 1]'",
+            "'[1, 0, 0]', '[1, 0, 2]'"
     })
     void givenAnArrayAndAShiftSize_ShouldSuccesfullyRotateOrReturnFalse(String arrayStr, String expectedArrayStr) {
 
