@@ -1,4 +1,4 @@
-package main.java.com;
+package com.service;
 
 public class DisplayService {
 
@@ -6,6 +6,10 @@ public class DisplayService {
 
         System.out.println( msg );
 
+    }
+
+    public String Testmth(String msg){
+      return msg;
     }
 
 

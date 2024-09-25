@@ -1,7 +1,12 @@
-package com.example;
-import main.java.com.DisplayService;
+package com;
+import com.service.CmdInputService;
+import com.service.DisplayService;
 
 public class OthelloMain {
+    /**
+     * @param args
+     * @throws InterruptedException
+     */
     public static void main(String[] args) throws InterruptedException{
         DisplayService disp = new DisplayService();
 
@@ -55,6 +60,9 @@ public class OthelloMain {
             Thread.sleep(1000);
             
         }
+
+        CmdInputService cmd = new CmdInputService();
+        cmd.CmdInput();
 
     }
 }
